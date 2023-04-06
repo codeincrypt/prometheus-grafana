@@ -20,15 +20,18 @@ To Start Grafana with systemd
 sudo systemctl daemon-reload
 sudo systemctl start grafana-server
 ```
-
 To check Grafana status with systemd
 
-```sudo systemctl status grafana-server```
+```
+sudo systemctl status grafana-server
+```
 
 
 Configure the Grafana server to start at boot:
 
-```sudo systemctl enable grafana-server.service```
+```
+sudo systemctl enable grafana-server.service
+```
 
 
 Restart the server with systemd, 
@@ -38,3 +41,25 @@ To restart the service and verify that the service has started, run the followin
 sudo systemctl restart grafana-server
 sudo systemctl status grafana-server
 ```
+
+After that you can check that Grafana is running on PORT 3000
+```
+sudo netstat -tulpn
+```
+or,
+```
+sudo netstat -tulpn | grep 3000
+```
+
+
+Open Grafana dashboard
+```
+http://{HOSTNAME}:3000
+```
+
+## Use dashboards
+This topic provides an overview of dashboard features and shortcuts, and describes how to use dashboard search
+
+
+[Grafana Dashboard](https://grafana.com/docs/grafana/latest/dashboards/use-dashboards/)
+
