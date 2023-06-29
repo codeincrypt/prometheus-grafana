@@ -8,8 +8,21 @@ Installing Grafana in Ubuntu Server
 You can install Grafana using APT repository, by downloading a `.deb` package, or by downloading a binary `.tar.gz` file.
 
 
-[Grafana Download & Install Official Docs](https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/#1-download-and-install)
+[Grafana Download](https://grafana.com/grafana/download)
 
+Install generic font configuration library
+```
+sudo apt-get install -y adduser libfontconfig1
+```
+
+Download grafana deb file through this below command, or you can direct download from Grafana
+```
+wget https://dl.grafana.com/enterprise/release/grafana-enterprise_10.0.1_amd64.deb
+```
+
+```
+sudo dpkg -i grafana-enterprise_9.3.2_amd64.deb
+```
 ## Start the server
 
 Start the server with systemd
